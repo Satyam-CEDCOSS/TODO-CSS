@@ -1478,30 +1478,52 @@
 
     <!-- Override All Other Styles by using Important -->
     <style>
-        body {
-          background-color: black;
-          font-family: monospace;
-          color: green;
+      body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+      }
+      #orange-text {
+        color: orange;
+      }
+      .pink-text {
+        color: pink !important;
+      }
+      .blue-text {
+        color: blue;
+      }
+    </style>
+    <h1 id="orange-text" class="pink-text blue-text" style="color: white">
+      Hello World!
+    </h1>
+
+    <!-- Use Hex Code for Specific Colors -->
+    <style>
+      body {
+        background-color: #000000;
+      }
+    </style>
+
+    <!-- Use Hex Code to Mix Colors -->
+    <style>
+        .red-text {
+          color: #FF0000;
         }
-        #orange-text {
-          color: orange;
+        .green-text {
+          color: #00FF00;
         }
-        .pink-text {
-          color: pink !important;
+        .dodger-blue-text {
+          color: #1E90FF;
         }
-        .blue-text {
-          color: blue;
+        .orange-text {
+          color: #FFA500;
         }
       </style>
-      <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+      <h1 class="red-text">I am red!</h1>
+      <h1 class="green-text">I am green!</h1>
+      <h1 class="dodger-blue-text">I am dodger blue!</h1>
+      <h1 class="orange-text">I am orange!</h1>
 
-      <!-- Use Hex Code for Specific Colors -->
-      <style>
-        body {
-          background-color: #000000;
-        }
-      </style>
-
-      
+    
   </body>
 </html>
