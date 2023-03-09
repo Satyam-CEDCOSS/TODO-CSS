@@ -1352,109 +1352,130 @@
 
     <!-- Understand Absolute versus Relative Units -->
     <style>
-        .injected-text {
-          margin-bottom: -25px;
-          text-align: center;
-        }
-      
-        .box {
-          border-style: solid;
-          border-color: black;
-          border-width: 5px;
-          text-align: center;
-        }
-      
-        .yellow-box {
-          background-color: yellow;
-          padding: 20px 40px 20px 40px;
-        }
-      
-        .red-box {
-          background-color: red;
-          margin: 20px 40px 20px 40px;
-          padding: 1.5em;
-      
-        }
-      
-        .green-box {
-          background-color: green;
-          margin: 20px 40px 20px 40px;
-        }
-      </style>
-      <h5 class="injected-text">margin</h5>
-      
-      <div class="box yellow-box">
-        <h5 class="box red-box">padding</h5>
-        <h5 class="box green-box">padding</h5>
-      </div>
+      .injected-text {
+        margin-bottom: -25px;
+        text-align: center;
+      }
 
-      <!-- Style the HTML Body Element -->
-      <style>
-        body {
+      .box {
+        border-style: solid;
+        border-color: black;
+        border-width: 5px;
+        text-align: center;
+      }
+
+      .yellow-box {
+        background-color: yellow;
+        padding: 20px 40px 20px 40px;
+      }
+
+      .red-box {
+        background-color: red;
+        margin: 20px 40px 20px 40px;
+        padding: 1.5em;
+      }
+
+      .green-box {
+        background-color: green;
+        margin: 20px 40px 20px 40px;
+      }
+    </style>
+    <h5 class="injected-text">margin</h5>
+
+    <div class="box yellow-box">
+      <h5 class="box red-box">padding</h5>
+      <h5 class="box green-box">padding</h5>
+    </div>
+
+    <!-- Style the HTML Body Element -->
+    <style>
+      body {
         background-color: black;
       }
-      </style>
+    </style>
 
-      <!-- Inherit Styles from the Body Element -->
-      <style>
-        body {
-          background-color: black;
-          color: green;
-          font-family: monospace;
-        }
-      
-      </style>
-      <body>
-        <h1>Hello World</h1>
-      </body>
+    <!-- Inherit Styles from the Body Element -->
+    <style>
+      body {
+        background-color: black;
+        color: green;
+        font-family: monospace;
+      }
+    </style>
+    <body>
+      <h1>Hello World</h1>
+    </body>
 
-      <!-- Prioritize One Style Over Another -->
-      <style>
-        body {
-          background-color: black;
-          font-family: monospace;
-          color: green;
-        }
-      
-        .pink-text{
-          color: pink;
-        }
-      </style>
-      <h1 class="pink-text">Hello World!</h1>
+    <!-- Prioritize One Style Over Another -->
+    <style>
+      body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+      }
 
-      <!-- Override Styles in Subsequent CSS -->
-      <style>
-        body {
-          background-color: black;
-          font-family: monospace;
-          color: green;
-        }
-        .pink-text {
-          color: pink;
-        }
-        .blue-text {
-          color: blue;
-        }
-      </style>
-      <h1 class="pink-text blue-text">Hello World!</h1>
+      .pink-text {
+        color: pink;
+      }
+    </style>
+    <h1 class="pink-text">Hello World!</h1>
 
-      <!-- Override Class Declarations by Styling ID Attributes -->
-      <style>
-        body {
-          background-color: black;
-          font-family: monospace;
-          color: green;
-        }
-        .pink-text {
-          color: pink;
-        }
-        .blue-text {
-          color: blue;
-        }
-        #orange-text{
-          color: orange;
-        }
-      </style>
-      <h1 class="pink-text blue-text" id="orange-text">Hello World!</h1>
+    <!-- Override Styles in Subsequent CSS -->
+    <style>
+      body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+      }
+      .pink-text {
+        color: pink;
+      }
+      .blue-text {
+        color: blue;
+      }
+    </style>
+    <h1 class="pink-text blue-text">Hello World!</h1>
+
+    <!-- Override Class Declarations by Styling ID Attributes -->
+    <style>
+      body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+      }
+      .pink-text {
+        color: pink;
+      }
+      .blue-text {
+        color: blue;
+      }
+      #orange-text {
+        color: orange;
+      }
+    </style>
+    <h1 class="pink-text blue-text" id="orange-text">Hello World!</h1>
+
+    <!-- Override Class Declarations with Inline Styles -->
+    <style>
+      body {
+        background-color: black;
+        font-family: monospace;
+        color: green;
+      }
+      #orange-text {
+        color: orange;
+      }
+      .pink-text {
+        color: pink;
+      }
+      .blue-text {
+        color: blue;
+      }
+    </style>
+    <h1 id="orange-text" class="pink-text blue-text" style="color: white">
+      Hello World!
+    </h1>
+
+    
   </body>
 </html>
